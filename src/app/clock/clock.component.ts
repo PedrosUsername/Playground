@@ -19,16 +19,16 @@ export class ClockComponent {
     }, 500 );
   }
 
-  get _hou(): string {
+  get _hou(): number {
     let date = new Date()
-    return date.getHours().toString();
+    return date.getHours();
   }
-  get _min(): string {
+  get _min(): number {
     let date = new Date()
-    return date.getMinutes().toString();
+    return date.getMinutes();
   }
-  get _sec(): string {
+  get _sec(): number {
     let date = new Date()
-    return date.getSeconds().toString();
+    return date.getSeconds();
   }
 }
