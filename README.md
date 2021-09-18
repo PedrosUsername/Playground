@@ -1,5 +1,5 @@
-## Open on heroku:
-> jikan.netlify.app
+## Open on Netlify:
+- [jikan.netlify.app](https://jikan.netlify.app/)
 
 # Playground
 
