@@ -7,6 +7,8 @@ import { ClockComponent } from './clock/clock.component';
 import { StopwatchComponent } from './stopwatch/stopwatch.component';
 import { PadPipe } from './shared/pipes/pad.pipe';
 import { TimerComponent } from './timer/timer.component';
+import { TimerContainerComponent } from './timer2/timer-container/timer-container.component';
+import { TimerPresenterComponent } from './timer2/timer-container/timer-presenter/timer-presenter.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { TimerComponent } from './timer/timer.component';
     StopwatchComponent,
     PadPipe,
     TimerComponent,
+    TimerContainerComponent,
+    TimerPresenterComponent,
   ],
   imports: [
     BrowserModule,

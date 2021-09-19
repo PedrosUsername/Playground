@@ -1,0 +1,27 @@
+<div id="timer-controlls-up">
+    <div (click)="hUp()" class="controlls">
+        
+    </div>
+    <div (click)="mUp()" class="controlls">
+        
+    </div>
+    <div (click)="sUp()" class="controlls">
+        
+    </div>    
+</div>
+
+<h3>{{ h | pad:2 }}:{{ m | pad:2 }}:{{ s | pad:2 }}</h3>
+
+<div id="timer-controlls-down">
+    <div (click)="hDown()" class="controlls">
+
+    </div>
+    <div (click)="mDown()" class="controlls">
+        
+    </div>
+    <div (click)="sDown()" class="controlls">
+        
+    </div>    
+</div>
+
+<button [disabled]="disable" (click)="run()">run</button>

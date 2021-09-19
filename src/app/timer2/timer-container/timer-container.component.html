@@ -1,0 +1,15 @@
+<app-timer-presenter 
+    [disable]="disable" 
+    [h]="hou" 
+    [m]="min" 
+    [s]="sec"
+    
+    (start)="run()"
+    (houUp)="houUpHandler()"
+    (minUp)="minUpHandler()"
+    (secUp)="secUpHandler()" 
+
+    (houDown)="houDownHandler()"
+    (minDown)="minDownHandler()"
+    (secDown)="secDownHandler()" >
+</app-timer-presenter>
