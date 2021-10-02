@@ -1,29 +1,9 @@
 <div id="my-content">
-    <h2>- Relógio -</h2>
-    <app-clock></app-clock>
-</div>
-
-<hr/>
-
-<div id="my-content">
-    <h2>- Cronômetro -</h2>
-    <app-stopwatch></app-stopwatch>
-</div>
-
-<hr/>
-
-<div id="my-content">
-    <h2>- Timer -</h2>
-    <app-timer></app-timer>
-</div>
-
-<hr/>
-
-<div id="my-content">
-    <h2>
-        - Timer -
-        <br>
-        (Container - Presenter architecture)
-    </h2>
-    <app-timer-container></app-timer-container>
+    <div class="floating-arrows">
+        <div (click)="arrowL()" class="arrow l"></div>        
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+        <div (click)="arrowR()" class="arrow r"></div>
+    </div>
 </div>

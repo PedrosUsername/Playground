@@ -1,2 +1,39 @@
 #my-content
+    position: relative
     text-align: center
+    height: 200px
+    width: 35%
+    margin: 30vh auto
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px)
+  #my-content
+    width: 70%
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px)
+  #my-content
+    width: 100%
+
+.floating-arrows
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+    width: 100%
+
+    .arrow
+        cursor: pointer
+        border: 2px solid black
+        background-repeat: no-repeat
+        background-size: cover        
+        height: 50px
+        width: 50px
+    .arrow:hover
+        background-color: black
+
+    .r
+        background-image: url("/assets/arrow_r.png")
+    .l
+        background-image: url("/assets/arrow_l.png")
+ 
