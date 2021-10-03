@@ -41,7 +41,7 @@ export class TimerContainerComponent implements OnInit {
         }
       }
   
-    }, 1000);
+    }, 900);
 
     setTimeout(() =>{
 

@@ -19,7 +19,7 @@ export class StopwatchComponent implements OnInit {
     setInterval( () => {
       this.min = this._min;
       this.sec = this._sec;
-    }, 1000 );
+    }, 900 );
   }
 
   get _min(): number {

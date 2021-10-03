@@ -1,9 +1,11 @@
-<div id="my-content">
-    <div class="floating-arrows">
-        <div (click)="arrowL()" class="arrow l"></div>        
-        <div>
-            <router-outlet></router-outlet>
+<div id="body2" [class.kuro]="!eye">
+    <div id="my-content">
+        <div class="floating-arrows">
+            <div (mousedown)="close()" (mouseup)="open()" (click)="arrowL()" class="arrow l"></div>        
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+            <div (mousedown)="close()" (mouseup)="open()" (click)="arrowR()" class="arrow r"></div>
         </div>
-        <div (click)="arrowR()" class="arrow r"></div>
     </div>
 </div>

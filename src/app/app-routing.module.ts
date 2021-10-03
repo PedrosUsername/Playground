@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'stopwatch', component: StopwatchComponent },
   { path: 'timer', component: TimerComponent },
   { path: 'timer-container', component: TimerContainerComponent },
+  {path: '', redirectTo: '/clock', pathMatch: 'full'},
 ];
 
 @NgModule({
