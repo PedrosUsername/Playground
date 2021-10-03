@@ -5,7 +5,7 @@ h2, h3
   -ms-user-select: none      /* IE 10+ */
   user-select: none          /* Likely future */       
 
-#timer-controlls-up
+#timer-controlls
     display: flex
     justify-content: space-between
     height: 22px
@@ -17,12 +17,16 @@ h2, h3
         cursor: pointer
         border: 2px solid black
         flex-wrap: wrap
-        background-image: url("/assets/plus.png")
         background-repeat: no-repeat
         background-size: cover
         height: 20px
         width: 20px
         margin: 0px
+    
+    .up
+        background-image: url("/assets/plus.png")
+    .down
+        background-image: url("/assets/minus.png")        
 
     .controlls:hover
         background-color: black
@@ -30,30 +34,7 @@ h2, h3
         background-color: grey
 
 
-#timer-controlls-down
-    display: flex
-    justify-content: space-between
-    height: 22px
-    width: 100px
-    margin: 0px auto
 
-
-    .controlls
-        cursor: pointer
-        border: 2px solid black
-        flex-wrap: wrap
-        background-image: url("/assets/minus.png")
-        background-repeat: no-repeat
-        background-size: cover
-        height: 20px
-        width: 20px
-        margin: 0px
-
-
-    .controlls:hover
-        background-color: black
-    .controlls:active
-        background-color: grey        
 
 
 button

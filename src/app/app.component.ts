@@ -40,11 +40,9 @@ export class AppComponent implements OnInit {
   }
 
   close(): void {
-    console.log("close")
     this.eye = false
   }
   open(): void {
-    console.log("open")
     this.eye = true
   }
 

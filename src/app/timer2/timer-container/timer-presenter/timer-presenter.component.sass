@@ -6,9 +6,9 @@ h2, h3
   user-select: none          /* Likely future */       
 
 #subtitle
-    font-size: 0.5em
+    font-size: 0.5em  
 
-#timer-controlls-up
+#timer-controlls
     display: flex
     justify-content: space-between
     height: 22px
@@ -18,46 +18,23 @@ h2, h3
 
     .controlls
         cursor: pointer
-        border: 2px solid black        
+        border: 2px solid black
         flex-wrap: wrap
-        background-image: url("/assets/plus.png")
         background-repeat: no-repeat
         background-size: cover
         height: 20px
         width: 20px
         margin: 0px
+    
+    .up
+        background-image: url("/assets/plus.png")
+    .down
+        background-image: url("/assets/minus.png")        
 
     .controlls:hover
         background-color: black
     .controlls:active
         background-color: grey
 
-
-#timer-controlls-down
-    display: flex
-    justify-content: space-between
-    height: 22px
-    width: 100px
-    margin: 0px auto
-
-
-    .controlls
-        cursor: pointer
-        border: 2px solid black        
-        flex-wrap: wrap
-        background-image: url("/assets/minus.png")
-        background-repeat: no-repeat
-        background-size: cover
-        height: 20px
-        width: 20px
-        margin: 0px
-
-
-    .controlls:hover
-        background-color: black
-    .controlls:active
-        background-color: grey        
-
-
 button
-    margin-top: 15px
+    margin-top: 15px    
