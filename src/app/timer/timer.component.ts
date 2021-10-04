@@ -53,7 +53,7 @@ export class TimerComponent implements OnInit{
       this.sec = 0;
       this.disable = false;
       
-    }, (h * 3600 + m * 60 + s + 1) * 1000);
+    }, (h * 3600 + m * 60 + s) * 1000);
 
   }
 
