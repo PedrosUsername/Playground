@@ -1,37 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-stopwatch',
   templateUrl: './stopwatch.component.html',
   styleUrls: ['./stopwatch.component.sass']
 })
-export class StopwatchComponent implements OnInit {
+export class StopwatchComponent{
 
-  min = this._min;
-  sec = this._sec;
-
-  ngOnInit(){
-    this.min = 0;
-    this.sec = 0;
-  }
+  min = 0
+  sec = 0
+  mil = 0
 
   constructor() {
-    setInterval( () => {
-      this.min = this._min;
-      this.sec = this._sec;
-    }, 900 );
+    // current date and time snapshot
+    let timeSnapshot = this.now()
+    // current timer display snapshot
+    let m = this.min
+    let s = this.sec    
+    let mi = this.mil
+    let my_var = setInterval(() => {
+
+    // elapsed time since snapshot
+    let aux = new Date( this.now().getTime() - timeSnapshot.getTime() )
+    // timer display reset
+    let timer = new Date( timeSnapshot.getTime() - timeSnapshot.getTime() ) 
+    // timer display update
+    timer = new Date ( aux.getTime() )
+
+    this.min = timer.getUTCMinutes()
+    this.sec = timer.getUTCSeconds()
+    this.mil = timer.getMilliseconds()
+  
+    }, 1);
   }
 
-  get _min(): number {
-    if (this.sec >= 59){
-      return this.min + 1;
-    }
-    return this.min;
-  }
-  get _sec(): number {
-    if (this.sec >= 59){
-      return 0;
-    }    
-    return this.sec + 1;
-  }
+  now(): Date {
+    let now = new Date()
+    return now
+  }  
 }
