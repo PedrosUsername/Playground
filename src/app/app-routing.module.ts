@@ -1,20 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClockComponent } from './clock/clock.component';
-import { StopwatchComponent } from './stopwatch/stopwatch.component';
-import { TimerComponent } from './timer/timer.component';
-import { TimerContainerComponent } from './timer2/timer-container/timer-container.component';
+import { TimeModule } from './time/time.module';
 
 const routes: Routes = [
-  { path: 'clock', component: ClockComponent },
-  { path: 'stopwatch', component: StopwatchComponent },
-  { path: 'timer', component: TimerComponent },
-  { path: 'timer-container', component: TimerContainerComponent },
-  {path: '', redirectTo: '/clock', pathMatch: 'full'},
+  { path: '', redirectTo: '/clock', pathMatch: 'full' },
+  // lazy loaded paths
+  { 
+    path: 'stopwatch',
+    loadChildren: () => import('./time/time.module').then(m => m.TimeModule)
+  },
+  {
+    path: 'timer',
+    loadChildren: () => import('./time/time.module').then(m => m.TimeModule)
+  },
+  { 
+    path: 'timer-container',
+    loadChildren: () => import('./time/time.module').then(m => m.TimeModule)
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    TimeModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
