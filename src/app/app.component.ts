@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxCowsayService } from 'ngx-cowsay';
 
 
 @Component({
@@ -13,10 +14,12 @@ export class AppComponent implements OnInit {
   eye = true
 
   constructor(
-    private router: Router
+    private router: Router,
+    private cowsay: NgxCowsayService
   ){}
   ngOnInit(): void {
     this.router.navigate([ this._where(this._stateWidget) ])
+    this.cowsay.log("hehehe", "", "a", false)
   }
 
 
