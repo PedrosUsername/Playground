@@ -7,6 +7,7 @@ import { StopwatchComponent } from './stopwatch/stopwatch.component';
 import { TimerComponent } from './timer/timer.component';
 import { TimerContainerComponent } from './timer-container/timer-container.component';
 import { TimerPresenterComponent } from './timer-container/timer-presenter/timer-presenter.component';
+import { TimeComponent } from './time.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TimerPresenterComponent } from './timer-container/timer-presenter/timer
     StopwatchComponent,
     TimerComponent,
     TimerContainerComponent,
-    TimerPresenterComponent
+    TimerPresenterComponent,
+    TimeComponent
   ],
   imports: [
     CommonModule,

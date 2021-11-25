@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TimeModule } from './time/time.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,6 @@ import { TimeModule } from './time/time.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TimeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
