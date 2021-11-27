@@ -12,4 +12,7 @@ export class AppNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showNavMenu(){
+    console.log("*unhide*");
+  }
 }

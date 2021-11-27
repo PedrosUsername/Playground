@@ -1,34 +1,72 @@
 nav
     position: fixed
-    height: 7vh
-    min-height: 50px
-    width: 100%
+    left: -30%
+    height: 100vh
+    width: 35%
     background-color: transparent
+    z-index: 1
 
-    div
+    #square__container
+        display: flex
+        justify-content: flex-end
+
+        width: 100%
+        height: 10%
+        min-height: 60px
+
+    #square
         display: flex
         flex-direction: column
 
-        margin-top: 4px
-        margin-left: 5px
-
         height: 100%
-        width: 5%
-        min-width: 50px
-        background-color: transparent
-        opacity: 0.1
-        transition: opacity 0.5s
+        width: 15%
 
-        cursor: pointer
+        background-color: transparent
+        opacity: 0.2
 
         div
-            display: block
             margin: auto
+            width: 80%
+            min-width: 47px
             height: 10%
             border-radius: 30px
 
             background-color: black
-            opacity: 1
 
-    div:hover 
-        opacity: 1
+
+
+
+#hidden__list
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 80%
+
+    span
+        flex: 1
+        margin-left: 30%
+        text-align: left
+        font-size: large
+        letter-spacing: 3px
+        color: white
+
+
+
+
+
+@media screen and (max-width: 992px)
+    nav 
+        width: 65%
+        left: -58%
+
+        #square    
+            width: 9%
+
+@media screen and (max-width: 600px)
+  nav 
+    width: 80%
+    left: -72%
+
+    #square    
+        width: 8%
+  
