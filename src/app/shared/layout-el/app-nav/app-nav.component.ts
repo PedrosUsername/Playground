@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-nav.component.sass']
 })
 export class AppNavComponent implements OnInit {
+  hoverEvent = false;
 
   constructor() { }
 
@@ -13,6 +14,9 @@ export class AppNavComponent implements OnInit {
   }
 
   showNavMenu(){
-    console.log("*unhide*");
+    this.hoverEvent = true;
+  }
+  hideNavMenu(){
+    this.hoverEvent = false;
   }
 }

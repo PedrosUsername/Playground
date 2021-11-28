@@ -1,9 +1,9 @@
-<nav (mouseenter)="showNavMenu()">
+<nav [class.unhide__nav]="hoverEvent" (mouseenter)="showNavMenu()" (mouseleave)="hideNavMenu()">
     <div id="square__container">
-        <div id="square">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div [class.unhide__square]="hoverEvent" id="square">
+            <div [class.colorIt]="hoverEvent"></div>
+            <div [class.colorIt]="hoverEvent"></div>
+            <div [class.colorIt]="hoverEvent"></div>
         </div>
     </div>
 
