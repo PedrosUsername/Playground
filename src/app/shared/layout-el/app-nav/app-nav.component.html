@@ -1,4 +1,5 @@
-<nav [class.unhide__nav]="hoverEvent" (mouseenter)="showNavMenu()" (mouseleave)="hideNavMenu()">
+<div id="square__ghost" (mouseenter)="showNavMenu()"></div>
+<nav [class.unhide__nav]="hoverEvent" (mouseleave)="hideNavMenu()">
     <div id="square__container">
         <div [class.unhide__square]="hoverEvent" id="square">
             <div [class.colorIt]="hoverEvent"></div>

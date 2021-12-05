@@ -1,10 +1,20 @@
+#square__ghost
+    position: absolute
+    top: 10px
+    left: 10px
+    display: flex
+    flex-direction: column
+
+    height: 58px
+    width: 58px
+
 nav
     position: fixed
     left: -29.5%
     height: 100vh
     width: 35%
     background-color: transparent
-    z-index: 1
+    z-index: -1 
     transition: left 0.7s, background-color 1s
 
     #square
@@ -58,7 +68,6 @@ nav
         left: -54%
 
 
-
 @media screen and (max-width: 600px)
   nav 
     width: 80%
@@ -79,6 +88,7 @@ nav
 .unhide__nav
     left: 0%
     background-color: black    
+    z-index: 2
 
 nav #square__container .unhide__square
     opacity: 1
